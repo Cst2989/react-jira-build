@@ -9,7 +9,5 @@ app.use(compression());
 
 app.use(express.static(__dirname + '/public', {maxAge: oneDay}));
 
-app.all('*', function(req, res) {
-  res.redirect('/');
-});
+
 app.listen(process.env.PORT || 5003)
